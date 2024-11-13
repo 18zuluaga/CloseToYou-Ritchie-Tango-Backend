@@ -14,7 +14,7 @@ async function bootstrap() {
         }));
         console.log('asdassas', formattedErrors);
         return new BadRequestException({
-          message: 'Validation failed',
+          message: 'Validation filed',
           errors: formattedErrors,
         });
       },
