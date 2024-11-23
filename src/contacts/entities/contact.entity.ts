@@ -39,6 +39,6 @@ export class Contact {
   @Column()
   role: string;
 
-  @Column()
+  @Column({ nullable: true })
   image: string;
 }
