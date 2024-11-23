@@ -1,5 +1,11 @@
-import { User } from "src/users/entities/user.entity";
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { User } from 'src/users/entities/user.entity';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity('contacts')
 export class Contact {
@@ -24,15 +30,15 @@ export class Contact {
 
   @Column({ type: 'json' })
   address: {
-    latitude: number;
-    longitude: number;
-    latitudeDelta: number;
-    longitudeDelta: number;
+    latitude: string;
+    longitude: string;
+    latitudeDelta: string;
+    longitudeDelta: string;
   };
 
   @Column()
   role: string;
 
   @Column()
-  image : string;
+  image: string;
 }

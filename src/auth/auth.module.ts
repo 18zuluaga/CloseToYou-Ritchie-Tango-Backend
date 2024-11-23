@@ -10,7 +10,7 @@ import { User } from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
 import { UsersModule } from 'src/users/users.module';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
-import { JwtStrategy } from 'src/common/strategys/jwt.strategy';
+import { JwtStrategys } from 'src/common/strategys/jwt.strategy';
 
 @Module({
   imports: [
@@ -27,7 +27,7 @@ import { JwtStrategy } from 'src/common/strategys/jwt.strategy';
     }),
   ],
   controllers: [AuthController],
-  providers: [AuthService, UsersService, JwtStrategy, JwtAuthGuard],
+  providers: [AuthService, UsersService, JwtStrategys, JwtAuthGuard],
   exports: [JwtAuthGuard],
 })
 export class AuthModule {}

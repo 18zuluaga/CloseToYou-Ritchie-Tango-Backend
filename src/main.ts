@@ -1,6 +1,5 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ResponseInterceptor } from './common/interceptors/response.interceptor';
 import { BadRequestException, ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
@@ -18,7 +17,7 @@ async function bootstrap() {
           errors: formattedErrors,
         });
       },
-    }),
+    })
   );
 
   await app.listen(3000);
